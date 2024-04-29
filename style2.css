@@ -1,0 +1,189 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/*  griglia di layout */
+.grid {
+    display: grid;
+    margin: 0 auto;
+    /* quante colonne sono necessarie */
+    /* le colonne sono larghe almeno 250px */
+    grid-template-columns: repeat(auto-fill);
+    /* quante righe sono necessarie */
+    /* le linee sono alte almeno 100px */
+    grid-auto-rows: minmax(100px, auto);
+    /* empie gli spazi vuoti nella griglia */
+    grid-auto-flow: row;
+}
+
+/* gli elementi con class="tall" si estendono su due righe */
+.tall { grid-row-end: span 2; }
+/* gli elementi con class="large" si distribuiscono su due colonne */
+.large { grid-column-end: span 2; }
+
+/* I campi .header e .footer si estendono dalla prima all'ultima colonna (-1). */
+.header,
+.footer {
+    grid-column: 1 / -1;
+}
+
+/* tutti gli elementi in .grid  */
+/* l'<header>, il <footer> e tutti gli <a>. */
+.grid > * {
+    background-color: #ffffff;
+    position: relative;
+    font-size: 150%;
+    margin: 20;
+}
+
+/* mette un bordo a tutti gli elementi all'interno di .grid */
+/* grazie ad uno "pseudo-elemento" inserito all'interno di ogni elemento */
+.grid > *:after{
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid #040404;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    top: -1px;
+}
+
+
+
+
+/* tipografia */
+
+body {
+    margin: 20px;
+    font-family: 'Space Mono', monospace;
+    background-color: #fff;
+    color: #000;
+}
+
+.header {
+    /* display flessibile per la testata */
+    display: flex;
+}
+
+/* titolo e sottotitolo */
+h1, h2 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding: 20px;
+}
+
+/* titolo */
+h1 {
+    text-transform: uppercase;
+    /* dimensione del carattere in funzione della larghezza della finestra */
+    font-size: 7vw;
+    line-height: .9;
+    font-weight: 700;
+    /* stesso valore di flex per h1 e h2 => stessa dimensione per entrambi */
+    flex: 1;
+}
+
+/* sottotitolo */
+h2 {
+    /* dimensione del carattere in funzione della larghezza della finestra */
+    font-size: 2vw;
+    line-height: 1.1;
+    /* vedi sotto ::before */
+    position: relative;
+    /* stesso valore di flex per h1 e h2 => stessa dimensione per entrambi */
+    flex: 1;
+}
+
+/* introduce uno "pseudo-elemento" all'interno di h2, prima del suo contenuto: (*before*) */
+/* che genera un bordo alla sua sinistra */
+/* il bordo è spostato in alto, in basso e a sinistra di 1px */
+h2::before {
+    border-left: 1px solid;
+    content: "";
+    display: block;
+    position: absolute;
+    top:-1px;
+    bottom: -1px;
+    left:-1px;
+}
+
+/* nomi delle erbe */
+a {
+    padding: 20px;
+    color: rgb(218, 173, 84);
+    text-decoration: none;
+}
+
+/* commento1 tra i box */
+p1 { padding: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;  
+}
+
+/* commento2 tra i box */
+p2 { padding: 20px;
+    color: rgb(102, 155, 32);
+    text-decoration: none;  
+}
+
+
+/* pseudo-elemento per introdurre un "+" centrato, visibile al passaggio del mouse 
+a::before {
+    content: '+';
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    /* opacità zero 
+    opacity: 0;
+    
+    
+a:hover::before{
+    /* opacità 1 al passaggio (:hover)
+    opacity: 1
+}
+*/
+
+/* aggiustamento delle immagini */
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* finestra a comparsa */
+.item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+.item div {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    padding: 1em;
+    opacity: .5;
+    transition: all 250ms;
+
+}
+
+.item:hover div {
+    top: 0;
+    opacity: 1;
+}
+
