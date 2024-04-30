@@ -10,7 +10,7 @@
     margin: 0 auto;
     /* quante colonne sono necessarie */
     /* le colonne sono larghe almeno 250px */
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     /* quante righe sono necessarie */
     /* le linee sono alte almeno 100px */
     grid-auto-rows: minmax(50px,auto);
@@ -20,14 +20,13 @@
 
 /* gli elementi con class="large" si distribuiscono su due colonne */
 .large { 
-    height: 80%;
-    grid-column-end: span 2; 
-        }
+    grid-auto-rows: minmax(50px,100px);
+    grid-column-end: span 2; }
 
 /* I campi .header e .footer si estendono dalla prima all'ultima colonna (-1). */
 .header,
 .footer {
-    grid-column: 1 / -1;
+grid-column: 1 / -1;
 }
 
 /* tutti gli elementi in .grid  */
@@ -35,8 +34,8 @@
 .grid > * {
     background-color: #ffffff;
     position: relative;
-    font-size: 100%;
-    margin: 10;
+    font-size: 150%;
+    margin: 20;
 }
 
 /* mette un bordo a tutti gli elementi all'interno di .grid */
@@ -52,8 +51,6 @@
     top: -1px;
 }
 
-
-/* tipografia */
 @font-face {
     font-family: 'CirrusCumulus'; /* Give your font a name */
     src: url('font/CirrusCumulus.otf') format('woff2'), /* Specify the path to your font files */
@@ -63,7 +60,7 @@
 
 body {
     margin: 20px;
-    font-family: 'CirrusCumulus';
+    font-family: 'CirrusCumulus', bold;
     background-color: #fff;
     color: #000;
 }
@@ -71,12 +68,13 @@ body {
 .header {
     /* display flessibile per la testata */
     display: flex;
+    font-size: medium;
 }
 
 /* titolo e sottotitolo */
 h1, h2 {
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 600400;
     margin: 0;
     padding: 20px;
 }
@@ -93,6 +91,7 @@ h1 {
 
 /* sottotitolo */
 h2 {
+    font-family: 'Space Mono', monospace;
     /* dimensione del carattere in funzione della larghezza della finestra */
     font-size: 2vw;
     line-height: 1.1;
@@ -106,6 +105,7 @@ h2 {
 /* che genera un bordo alla sua sinistra */
 /* il bordo è spostato in alto, in basso e a sinistra di 1px */
 h2::before {
+    font-family: 'Space Mono', monospace;
     border-left: 1px solid;
     content: "";
     display: block;
@@ -116,84 +116,27 @@ h2::before {
 }
 
 /* nomi delle erbe */
-a {
+a { font-family: 'Space Mono', monospace;
+    font-size:small;
     padding: 20px;
     color: rgb(218, 173, 84);
     text-decoration: none;
 }
 
 /* commento1 tra i box */
-p1 { padding: 20px;
+p1 {font-size:small;
     color: rgb(0, 0, 0);
     text-decoration: none;  
 }
 
 /* commento2 tra i box */
-p2 { padding: 20px;
+p2 {font-size:small;
     color: rgb(102, 155, 32);
     text-decoration: none;  
 }
 
 
-/* pseudo-elemento per introdurre un "+" centrato, visibile al passaggio del mouse 
-a::before {
-    content: '+';
-    display: block;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4em;
-    /* opacità zero 
-    opacity: 0;
-    
-    
-a:hover::before{
-    /* opacità 1 al passaggio (:hover)
-    opacity: 1
-}
-*/
-
-/* aggiustamento delle immagini */
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* finestra a comparsa */
-.item {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-}
-
-.item div {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(255, 255, 255);
-    padding: 1em;
-    opacity: .5;
-    transition: all 250ms;
-
-}
-
-.item:hover div {
-    top: 0;
-    opacity: 1;
-}
-
-
-
-/* elemento "+" centrato, visibile al passaggio del mouse */
+/* pseudo-elemento per introdurre un "+" centrato, visibile al passaggio del mouse */
 .add::before {
     content: '+';
     display: block;
@@ -209,25 +152,27 @@ img{
     opacity: 1;
     }
 
-/* Bottone di upload immagini */
-    .upload-btn {
-        font-family: 'Space Mono', monospace;
-        text-transform: uppercase;
-        font-size: larger;
-        padding: 10px 20px;
-        background-color: rgb(255, 255, 255);
-        color: rgb(218, 173, 84);
-        border: none;
-        cursor: pointer;
-      }
 
-/* Spazio per scrivere */
-      textarea {
-        font-family: 'Space Mono', monospace;
-        font-size: larger;
-        padding: 10px 20px;
-        border: 1px solid #040404;
-        width: auto;
-        height: auto;
-        cursor: pointer;
-      }
+/* aggiustamento delle immagini */
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* per far si che non si vede il bottone di stampa*/
+@media print {
+    .print-button {
+      display: none;
+      
+    }
+  }
+.print-button {
+font-family: 'Space Mono', monospace;
+text-transform: uppercase;
+font-size: larger;
+text-align: left;
+border: none;
+}
+

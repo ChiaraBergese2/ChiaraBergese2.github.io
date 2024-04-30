@@ -1,0 +1,9 @@
+* { box-sizing: border-box; margin: 0}
+@page {
+    size: 14cm 21cm;
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+/*  on cache les éléments qu’on ne veut pas imprimer */

@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Erbe Spontanee</title>
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style3.css">
   <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
-
+  <style>
+    @media print {
+      .print-button {
+        display: absolute;
+      }
+    }
+  </style>
 </head>
 <body>
-    
-<main class="grid">
+  <main class="grid">
     <header class="header">
         <h1>Calendula</h1>
-        <h2>Stampa</h2>
     </header>
-        <a class="large" href=""><img src="img/4_Calendula.jpeg"></a>
-        <a class="large" id="">
-            <p2>Risotto alla calendula<br></p2>
-            <p1>Preparare dapprima un brodo vegetale, poi fare soffritto con aglio e cipolla, integrare il riso e aggiungere un po’ alla volta mestolate di brodo. Quando mancano 5 minuti a fine cottura aggiungere la calendula (fiori e foglie) che è stata solo sciacquata e scolata. Mantecare il tutto, lascando il riso un po’ umido. Infine a fuoco spento aggiungere parmigiano.
-            Da ex direttore di enoteca mi permetto di suggerire l’abbinamento con un Frascati il cui sentore è proprio quello di fiori di campo.<br></p1>
-            <p2>Simone</p2>
-        </a>
-</a>
+    <a class="img" href=""><img src="img/4_Calendula.jpeg"></a>
+    <a class="large" id="">
+        <p2>Risotto alla calendula<br></p2>
+        <p1>Preparare dapprima un brodo vegetale, poi fare soffritto con aglio e cipolla, integrare il riso e aggiungere un po’ alla volta mestolate di brodo. Quando mancano 5 minuti a fine cottura aggiungere la calendula (fiori e foglie) che è stata solo sciacquata e scolata. Mantecare il tutto, lascando il riso un po’ umido. Infine a fuoco spento aggiungere parmigiano.
+        Da ex direttore di enoteca mi permetto di suggerire l’abbinamento con un Frascati il cui sentore è proprio quello di fiori di campo.<br></p1>
+        <p2>Simone</p2>
+    </a>
+    <button class="print-button large" id="printButton">Stampa</button>
+  </main>
+
+  <script type="text/javascript">
+    document.getElementById('printButton').addEventListener("click", function(){
+      window.print();
+    });
+  </script>
+</body>
+</html>

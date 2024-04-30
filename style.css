@@ -13,15 +13,14 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     /* quante righe sono necessarie */
     /* le linee sono alte almeno 100px */
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(50px,auto);
     /* empie gli spazi vuoti nella griglia */
     grid-auto-flow: dense;
 }
 
-/* gli elementi con class="tall" si estendono su due righe */
-.tall { grid-row-end: span 2; }
 /* gli elementi con class="large" si distribuiscono su due colonne */
-.large { grid-column-end: span 2; }
+.large { 
+    grid-column-end: span 2; }
 
 /* I campi .header e .footer si estendono dalla prima all'ultima colonna (-1). */
 .header,
@@ -51,14 +50,16 @@
     top: -1px;
 }
 
-
-
-
-/* tipografia */
+@font-face {
+    font-family: 'CirrusCumulus'; /* Give your font a name */
+    src: url('font/CirrusCumulus.otf') format('woff2'), /* Specify the path to your font files */
+         url('font/CirrusCumulus.ttf') format('woff'); /* Add additional file formats if necessary */
+    /* Add more src lines for additional file formats */
+  }
 
 body {
     margin: 20px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'CirrusCumulus', bold;
     background-color: #fff;
     color: #000;
 }
@@ -78,7 +79,6 @@ h1, h2 {
 
 /* titolo */
 h1 {
-    text-transform: uppercase;
     /* dimensione del carattere in funzione della larghezza della finestra */
     font-size: 7vw;
     line-height: .9;
@@ -89,6 +89,7 @@ h1 {
 
 /* sottotitolo */
 h2 {
+    font-family: 'Space Mono', monospace;
     /* dimensione del carattere in funzione della larghezza della finestra */
     font-size: 2vw;
     line-height: 1.1;
@@ -102,6 +103,7 @@ h2 {
 /* che genera un bordo alla sua sinistra */
 /* il bordo è spostato in alto, in basso e a sinistra di 1px */
 h2::before {
+    font-family: 'Space Mono', monospace;
     border-left: 1px solid;
     content: "";
     display: block;
@@ -112,27 +114,27 @@ h2::before {
 }
 
 /* nomi delle erbe */
-a {
+a { font-family: 'Space Mono', monospace;
+    line-height:125%;
     padding: 20px;
     color: rgb(218, 173, 84);
     text-decoration: none;
 }
 
 /* commento1 tra i box */
-p1 { padding: 20px;
+p1 { font-size: x-large;
     color: rgb(0, 0, 0);
     text-decoration: none;  
 }
 
 /* commento2 tra i box */
-p2 { padding: 20px;
-    color: rgb(102, 155, 32);
+p2 { color: rgb(102, 155, 32);
     text-decoration: none;  
 }
 
 
-/* pseudo-elemento per introdurre un "+" centrato, visibile al passaggio del mouse 
-a::before {
+/* pseudo-elemento per introdurre un "+" centrato, visibile al passaggio del mouse */
+.add::before {
     content: '+';
     display: block;
     position: absolute;
@@ -143,16 +145,10 @@ a::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
-    /* opacità zero 
-    opacity: 0;
-    
-    
-a:hover::before{
-    /* opacità 1 al passaggio (:hover)
-    opacity: 1
-}
-*/
+    font-size: 5em;
+    opacity: 1;
+    }
+
 
 /* aggiustamento delle immagini */
 img{
@@ -185,5 +181,16 @@ img{
 .item:hover div {
     top: 0;
     opacity: 1;
+}
+
+/* per far si che non si vede il bottone di stampa*/
+@media print {
+    .print-button {
+      display: none;
+    }
+  }
+.print-button {
+height: 80%;
+border: none;
 }
 
