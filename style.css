@@ -25,6 +25,7 @@
 /* I campi .header e .footer si estendono dalla prima all'ultima colonna (-1). */
 .header,
 .footer {
+    font-family: 'Space Mono';
     grid-column: 1 / -1;
 }
 
@@ -173,14 +174,18 @@ img{
     height: 100%;
     background: rgb(255, 255, 255);
     padding: 1em;
-    opacity: .5;
+    opacity: 0; /*era 0.5*/
     transition: all 250ms;
-
 }
 
 .item:hover div {
     top: 0;
     opacity: 1;
+}
+footer.footer {
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
 }
 
 /* per far si che non si vede il bottone di stampa*/
