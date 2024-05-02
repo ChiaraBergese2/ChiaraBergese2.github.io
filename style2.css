@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "OrticaAngular-Bold";
+    src: url("font/OrticaAngular-Bold.woff2") format("woff2");
+  }
+
+@font-face { 
+    font-family: "ApfelGrotezk-Mittel";
+    src: url('font/ApfelGrotezk-Mittel.woff2') format('woff2');
+  }
+
+  @font-face { /*  bold */
+    font-family: "ApfelGrotezk-Fett";
+    src: url('font/ApfelGrotezk-Fett.woff2') format('woff2');
+  }
+
 /*  griglia di layout */
 .grid {
     display: grid;
@@ -54,16 +69,10 @@
 
 
 /* tipografia */
-@font-face {
-    font-family: 'CirrusCumulus'; /* Give your font a name */
-    src: url('font/CirrusCumulus.otf') format('woff2'), /* Specify the path to your font files */
-         url('font/CirrusCumulus.ttf') format('woff'); /* Add additional file formats if necessary */
-    /* Add more src lines for additional file formats */
-  }
 
 body {
     margin: 20px;
-    font-family: 'CirrusCumulus';
+    font-family: 'ApfelGrotezk-Mittel';
     background-color: #fff;
     color: #000;
 }
@@ -83,6 +92,7 @@ h1, h2 {
 
 /* titolo */
 h1 {
+    font-family: 'OrticaAngular-Bold';
     /* dimensione del carattere in funzione della larghezza della finestra */
     font-size: 7vw;
     line-height: .9;
@@ -93,6 +103,7 @@ h1 {
 
 /* sottotitolo */
 h2 {
+    font-family: 'ApfelGrotezk-Mittel';
     /* dimensione del carattere in funzione della larghezza della finestra */
     font-size: 2vw;
     line-height: 1.1;
@@ -106,6 +117,7 @@ h2 {
 /* che genera un bordo alla sua sinistra */
 /* il bordo è spostato in alto, in basso e a sinistra di 1px */
 h2::before {
+    font-family: 'ApfelGrotezk-Mittel';
     border-left: 1px solid;
     content: "";
     display: block;
@@ -116,7 +128,7 @@ h2::before {
 }
 
 /* nomi delle erbe */
-a {
+a { font-family: 'ApfelGrotezk-Mittel';
     padding: 20px;
     color: rgb(218, 173, 84);
     text-decoration: none;
@@ -211,7 +223,7 @@ img{
 
 /* Bottone di upload immagini */
     .upload-btn {
-        font-family: 'Space Mono', monospace;
+        font-family: 'ApfelGrotezk-Mittel';
         text-transform: uppercase;
         font-size: larger;
         padding: 10px 20px;
@@ -223,7 +235,7 @@ img{
 
 /* Spazio per scrivere */
       textarea {
-        font-family: 'Space Mono', monospace;
+        font-family: 'ApfelGrotezk-Mittel';
         font-size: larger;
         padding: 10px 20px;
         border: 1px solid #040404;

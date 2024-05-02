@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "OrticaAngular-Bold";
+    src: url("font/OrticaAngular-Bold.woff2") format("woff2");
+  }
+
+@font-face { 
+    font-family: "ApfelGrotezk-Mittel";
+    src: url('font/ApfelGrotezk-Mittel.woff2') format('woff2');
+  }
+
+  @font-face { /*  bold */
+    font-family: "ApfelGrotezk-Fett";
+    src: url('font/ApfelGrotezk-Fett.woff2') format('woff2');
+  }
+
+
 /*  griglia di layout */
 .grid {
     display: grid;
@@ -25,7 +41,7 @@
 /* I campi .header e .footer si estendono dalla prima all'ultima colonna (-1). */
 .header,
 .footer {
-    font-family: 'Space Mono';
+    font-family: 'ApfelGrotezk-Mittel';
     grid-column: 1 / -1;
 }
 
@@ -51,16 +67,9 @@
     top: -1px;
 }
 
-@font-face {
-    font-family: 'CirrusCumulus'; /* Give your font a name */
-    src: url('font/CirrusCumulus.otf') format('woff2'), /* Specify the path to your font files */
-         url('font/CirrusCumulus.ttf') format('woff'); /* Add additional file formats if necessary */
-    /* Add more src lines for additional file formats */
-  }
-
 body {
     margin: 20px;
-    font-family: 'CirrusCumulus', bold;
+    font-family: 'ApfelGrotezk-Mittel';
     background-color: #fff;
     color: #000;
 }
@@ -80,9 +89,10 @@ h1, h2 {
 
 /* titolo */
 h1 {
+    font-family: 'OrticaAngular-Bold';
     /* dimensione del carattere in funzione della larghezza della finestra */
     font-size: 7vw;
-    line-height: .9;
+    line-height: 1.0;
     font-weight: 700;
     /* stesso valore di flex per h1 e h2 => stessa dimensione per entrambi */
     flex: 1;
@@ -90,7 +100,7 @@ h1 {
 
 /* sottotitolo */
 h2 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'ApfelGrotezk-Mittel';
     /* dimensione del carattere in funzione della larghezza della finestra */
     font-size: 2vw;
     line-height: 1.1;
@@ -104,7 +114,7 @@ h2 {
 /* che genera un bordo alla sua sinistra */
 /* il bordo è spostato in alto, in basso e a sinistra di 1px */
 h2::before {
-    font-family: 'Space Mono', monospace;
+    font-family: 'ApfelGrotezk-Mittel';
     border-left: 1px solid;
     content: "";
     display: block;
@@ -115,7 +125,7 @@ h2::before {
 }
 
 /* nomi delle erbe */
-a { font-family: 'Space Mono', monospace;
+a { font-family: 'ApfelGrotezk-Mittel';
     line-height:125%;
     padding: 20px;
     color: rgb(218, 173, 84);
