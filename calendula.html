@@ -3,16 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Erbe Spontanee</title>
-  <link rel="stylesheet" href="style3.css">
-  
-  <style>
-    @media print {
-      .print-button {
-        display: absolute;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style3.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="print.css" media="print">
 </head>
+
 <body>
   <main class="grid">
     <header class="header">
@@ -28,6 +22,7 @@
     <button class="print-button large" id="printButton">Stampa</button>
   </main>
 
+  
   <script type="text/javascript">
     document.getElementById('printButton').addEventListener("click", function(){
       window.print();

@@ -1,9 +1,102 @@
-* { box-sizing: border-box; margin: 0}
-@page {
-    size: 14cm 21cm;
-    margin: 0;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
-body{
-    margin: 0;
+
+/* Font-face declarations */
+@font-face {
+    font-family: "OrticaAngular-Bold";
+    src: url("font/OrticaAngular-Bold.woff2") format("woff2");
 }
-/*  on cache les éléments qu’on ne veut pas imprimer */
+
+@font-face { 
+    font-family: "ApfelGrotezk-Mittel";
+    src: url('font/ApfelGrotezk-Mittel.woff2') format('woff2');
+}
+
+@media print {
+    /* Hide the print button */
+    .print-button {
+        display: none;
+    }
+
+/* Set page size to A5 landscape */
+    @page {
+        size: 7cm 5cm;
+        margin: 0;
+    }
+
+    /* Adjust margins for body */
+    body {
+        border: none;
+        background-color: #FAF9F6;
+    }
+
+    /* Adjust header */
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust h1 and h2 */
+    h1, h2 {
+        font-size: 16px; /* Adjust font size for print */
+        margin: 0;
+        padding: 10px;
+    }
+
+    /* Adjust h1 */
+    h1 {
+        font-family: 'OrticaAngular-Bold';
+        color: black;
+        font-size: 24pt;
+        padding: 0 0 0 0;
+    }
+
+    /* Adjust h2 */
+    h2 {
+        font-family: 'ApfelGrotezk-Mittel';
+        color: black;
+    }
+
+    /* Adjust link styles */
+    a {
+        font-family: 'ApfelGrotezk-Mittel';
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Adjust paragraph styles */
+    p1 {
+        color: black;
+        font-size: 12pt;
+    }
+
+    p2 {
+        color: black;
+        font-size: 18pt;
+    }
+
+    /* Adjust image styles */
+    img {
+        width: 50%; /* Imposta la larghezza dell'immagine al 100% della larghezza della pagina */
+        margin: 20px auto; /* Aggiunge un margine superiore e inferiore di 20px e centra l'immagine orizzontalmente */
+        display: block; /* Imposta l'immagine come blocco per garantire che il margine funzioni correttamente */
+        filter: grayscale(100%); /* Apply grayscale filter */
+    }
+
+    /* Adjust grid layout */
+    .grid {
+        display: flex;
+        content: normal;
+        border: 2px solid black;
+        padding: 20px;
+    }
+
+    /* Make large items span two columns */
+    .large {
+        grid-auto-rows: minmax(50px,100px);
+        padding-left: 20px;
+    }
+}

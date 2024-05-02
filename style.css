@@ -42,13 +42,14 @@
 .header,
 .footer {
     font-family: 'ApfelGrotezk-Mittel';
+    color: #662d91;
     grid-column: 1 / -1;
 }
 
 /* tutti gli elementi in .grid  */
 /* l'<header>, il <footer> e tutti gli <a>. */
 .grid > * {
-    background-color: #ffffff;
+    background-color: #FAF9F6;
     position: relative;
     font-size: 150%;
     margin: 20;
@@ -60,17 +61,16 @@
     content: '';
     display: block;
     position: absolute;
-    border: 1px solid #040404;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    top: -1px;
+    border: 2px solid #662d91;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    top: -2px;
 }
 
 body {
     margin: 20px;
-    font-family: 'ApfelGrotezk-Mittel';
-    background-color: #fff;
+    background-color: #FAF9F6;
     color: #000;
 }
 
@@ -92,7 +92,8 @@ h1 {
     font-family: 'OrticaAngular-Bold';
     /* dimensione del carattere in funzione della larghezza della finestra */
     font-size: 7vw;
-    line-height: 1.0;
+    color: #662d91;
+    line-height: 1.1;
     font-weight: 700;
     /* stesso valore di flex per h1 e h2 => stessa dimensione per entrambi */
     flex: 1;
@@ -100,10 +101,11 @@ h1 {
 
 /* sottotitolo */
 h2 {
-    font-family: 'ApfelGrotezk-Mittel';
+    font-family: 'OrticaAngular-Bold';
+    color: #662d91;
     /* dimensione del carattere in funzione della larghezza della finestra */
-    font-size: 2vw;
-    line-height: 1.1;
+    font-size: 3vw;
+    line-height: 1.2;
     /* vedi sotto ::before */
     position: relative;
     /* stesso valore di flex per h1 e h2 => stessa dimensione per entrambi */
@@ -115,34 +117,28 @@ h2 {
 /* il bordo è spostato in alto, in basso e a sinistra di 1px */
 h2::before {
     font-family: 'ApfelGrotezk-Mittel';
-    border-left: 1px solid;
+    border-left: 2px solid #662d91;;
     content: "";
     display: block;
     position: absolute;
-    top:-1px;
-    bottom: -1px;
-    left:-1px;
+    top:-2px;
+    bottom: -2px;
+    left:-2px;
 }
 
 /* nomi delle erbe */
 a { font-family: 'ApfelGrotezk-Mittel';
     line-height:125%;
     padding: 20px;
-    color: rgb(218, 173, 84);
+    color: #662d91;
     text-decoration: none;
 }
 
 /* commento1 tra i box */
 p1 { font-size: x-large;
-    color: rgb(0, 0, 0);
+    color: #85a43b;
     text-decoration: none;  
 }
-
-/* commento2 tra i box */
-p2 { color: rgb(102, 155, 32);
-    text-decoration: none;  
-}
-
 
 /* pseudo-elemento per introdurre un "+" centrato, visibile al passaggio del mouse */
 .add::before {
@@ -171,6 +167,7 @@ img{
 
 /* finestra a comparsa */
 .item {
+        background-color: #FAF9F6;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -182,7 +179,7 @@ img{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(255, 255, 255);
+    background: #FAF9F6;
     padding: 1em;
     opacity: 0; /*era 0.5*/
     transition: all 250ms;
