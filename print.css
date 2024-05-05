@@ -33,6 +33,7 @@
     }
   }
 
+
 /*  griglia di layout */
 .grid {
     display: grid;
@@ -65,7 +66,7 @@ grid-column: 1 / -1;
     background-color: black;
     position: relative;
     font-size: 150%;
-    margin: 20;
+    margin: 40;
 }
 
 /* mette un bordo a tutti gli elementi all'interno di .grid */
@@ -83,7 +84,7 @@ grid-column: 1 / -1;
 
 body {
     margin: 20px;
-    background-color:#FAF9F6;
+    padding-right: 20px;
 }
 
 .header {
@@ -95,14 +96,14 @@ body {
 h1, h2 {
     font-size: 48px; /* Adjust font size for print */
     margin: 0;
-    padding: 10px;
+    padding-left: 30px;
 }
 
 /* titolo */
 h1 {
     font-family: 'OrticaAngular-Bold';
         color: black;
-        padding: 20px;
+        padding-left: 30px;
 }
 
 /* sottotitolo */
@@ -128,7 +129,7 @@ h2::before {
 /* nomi delle erbe */
 a { font-family: 'ApfelGrotezk-Mittel';
     font-size: 12pt;
-    padding: 20px;
+    padding: 30px;
     line-height: 0.9;
     color:black;
     text-decoration: none;
@@ -149,7 +150,7 @@ p2 {font-size: 12pt;
 /* aggiustamento delle immagini */
 img{
     width: 50%; /* Imposta la larghezza dell'immagine al 100% della larghezza della pagina */
-    margin: 10px ; /* Aggiunge un margine superiore e inferiore di 20px e centra l'immagine orizzontalmente */
+    margin-left: 150px ; /* Aggiunge un margine superiore e inferiore di 20px e centra l'immagine orizzontalmente */
     filter: grayscale(100%); /* Apply grayscale filter */
 }
 
