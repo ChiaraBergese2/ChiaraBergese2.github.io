@@ -144,10 +144,11 @@ p1 {font-size: x-large;
     text-decoration: none;   
 }
 
-h3 {font-family: 'ApfelGrotezk-Mittel';
+p3 {font-family: 'ApfelGrotezk-Mittel';
+    border: 2px dotted #85a43b;
     text-transform: none;
     font-size: 18px;
-    color:#85a43b;
+    color:#662d91;
     text-decoration: none;   
 }
 

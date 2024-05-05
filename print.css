@@ -93,7 +93,7 @@ body {
 
 /* titolo e sottotitolo */
 h1, h2 {
-    font-size: 36px; /* Adjust font size for print */
+    font-size: 48px; /* Adjust font size for print */
     margin: 0;
     padding: 10px;
 }
