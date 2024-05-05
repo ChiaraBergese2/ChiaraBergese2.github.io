@@ -20,6 +20,7 @@
   }
 
 
+
 /*  griglia di layout */
 .grid {
     display: grid;
@@ -78,6 +79,7 @@ body {
     /* display flessibile per la testata */
     display: flex;
 }
+
 
 /* titolo e sottotitolo */
 h1, h2 {
@@ -201,8 +203,20 @@ footer.footer {
       display: none;
     }
   }
+
 .print-button {
 height: 80%;
 border: none;
 }
 
+a.about {
+text-transform: uppercase;
+font-family: 'ApfelGrotezk-Mittel';
+font-size: 1.5em;
+color:#85a43b;
+}
+
+a.about:hover {
+    color: #662d91;
+    border: none;
+    }

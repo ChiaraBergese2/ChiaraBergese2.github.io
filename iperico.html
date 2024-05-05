@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Erbe Spontanee</title>
+  <link rel="stylesheet" href="style3.css" media="screen">
+ <link rel="stylesheet" type="text/css" href="print.css" media="print">
+</head>
+
+<body>
+  <main class="grid">
+    <header class="header">
+        <h1>Iperico</h1>
+    </header>
+    
+    <a class="img large" href=""><img src="img/13_Iperico.jpeg"></a>
+    <a class="large" id="">
+        <p2>Curiosità<br></p2>
+        <p1>Hipericum perforato (Iperico, erba di San Giovanni, erba scacciadiavoli).
+            Pianta medicinale associata dalla tradizione popolare al martirio di S. Giovanni, poiche' fiorirebbe in corrispondenza della data di nascita del santo, il 24 giugno. Strofinando i petali tra le dita, appare un liquido rosso che ricorderete il sangue del suo martirio avvenuto in settembre e anche i forellini sulle foglie ricorderebbero la flagellazione.
+            In effetti, la fioritura dell'iperico inizia prima di quella data e procede in base al clima e alla zona geografica.<br></p1>
+        <p2>Claudio</p2>
+    </a>
+    <button class="print-button" id="printButton">Stampa</button>
+  </main>
+
+  
+  <script type="text/javascript">
+    document.getElementById('printButton').addEventListener("click", function(){
+      window.print();
+    });
+  </script>
+
+
+</body>
+</html>

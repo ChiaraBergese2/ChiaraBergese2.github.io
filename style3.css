@@ -42,8 +42,10 @@
 
 /* gli elementi con class="large" si distribuiscono su due colonne */
 .large { 
-    grid-auto-rows: minmax(50px,100px);
-    grid-column-end: span 2; }
+    height: 650px;
+    grid-column-end: span 2; 
+}
+
 
 /* I campi .header e .footer si estendono dalla prima all'ultima colonna (-1). */
 .header,
@@ -86,7 +88,7 @@ body {
 /* titolo e sottotitolo */
 h1, h2 {
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 50;
     margin: 0;
     padding: 20px;
 }
@@ -137,8 +139,15 @@ a { font-family: 'ApfelGrotezk-Mittel';
 }
 
 /* commento1 tra i box */
-p1 {padding: 20px;
+p1 {font-size: x-large;
     color: #85a43b;
+    text-decoration: none;   
+}
+
+h3 {font-family: 'ApfelGrotezk-Mittel';
+    text-transform: none;
+    font-size: 18px;
+    color:#85a43b;
     text-decoration: none;   
 }
 

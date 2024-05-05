@@ -36,6 +36,7 @@
 
 /* gli elementi con class="large" si distribuiscono su due colonne */
 .large { 
+    height: 650px;
     grid-column-end: span 2; 
         }
 
